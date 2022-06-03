@@ -19,9 +19,9 @@ export const QuestionnaireTable: FC<Props> = ({
         </Tr>
       </Thead>
       <Tbody>
-        {questionnaires.map(q => {
+        {questionnaires.map((q, i) => {
           return (
-            <Tr>
+            <Tr key={i}>
               <Td>{q.title}</Td>
               <Td>{q.description}</Td>
               <Td>{q.n_answers}</Td>
